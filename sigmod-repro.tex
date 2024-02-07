@@ -5,7 +5,7 @@
 % DO NOT REMOVE OR COMMENT THIS BLOCK FROM HERE
 \usepackage{booktabs}
 \settopmatter{printacmref=false} % Removes citation information below abstract
-\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
+\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in the first column
 \pagestyle{plain}
 
 \makeatletter
@@ -18,9 +18,9 @@
 
 \begin{document}
 
-
+\newcommand\papertitle[0]{This is the Paper Title}
 %%
-\title{Reproducibility Report for ACM SIGMOD 20XX Paper:\\ ``This is the Paper Title''}
+\title[ARI Report for ``\papertitle'']{Reproducibility Report for ACM SIGMOD 20XX Paper:\\ ``\papertitle''}
 
 %%
 %% The "author" command and its associated commands are used to define
@@ -45,7 +45,7 @@ Include a short summary of the reproducibility findings.
 
 
 %%
-%% This command processes the author and affiliation and title
+%% This command processes the author affiliation and title
 %% information and builds the first part of the formatted document.
 \maketitle
 
@@ -54,11 +54,11 @@ Include a short summary of the reproducibility findings.
 Provide all the information of the reproduced paper, the authors and affiliations, and a short summary of the reproducibility result. Please include a reference to the reproduced paper in the introduction.
 
 \section{Submission} 
-Provide a detailed description of the contents of the reproducibility submission in terms of code, scripts, and data. Please keep in mind that the ideal submission requires one or a few scripts to be executed to run in order to recreate the vast majority of the results (and the figures to easily visually inspect them), so please describe how close to the ideal reproducibility submission this is. 
+Provide a detailed description of the contents of the reproducibility submission in terms of code, scripts, and data. Please keep in mind that the ideal submission requires one or a few scripts to be executed to run to recreate the vast majority of the results (and the figures to easily visually inspect them), so please describe how close this is to the ideal reproducibility submission. 
 
 A list with a summary of the submission contents is also useful. For example:
 \begin{itemize}
-\item GitHub repository with code and scripts at: github.com/repository-URL
+\item GitHub repository with code and scripts at: \url{github.com/repository-URL}
 \item detailed readme file at URL
 \item data generators
 \item data sources at URL	
@@ -89,18 +89,17 @@ Provide information about the environment used in the paper and in the reproduci
 \section{Reproducibility Evaluation}
 
 \subsection{Process}
-Here, describe in more detail the process, what was easily achieved and what was more complex. You can also explain how you discussed with the authors to address specific challenges during the reproducibility phase.
+Here, describe in more detail the process, what was easily achieved, and what was more complex. You can also explain how you discussed with the authors to address specific challenges during the reproducibility phase.
 
 \subsection{Results}
-Here, present the key finding of the reproducibility evaluation. Ideally, all major findings of the paper can be reproduced. Note that not each and every figure of the paper are needed to be reproduced for the paper to be reproducible. Rather, the figures that support the key results. 
+Here, present the key finding of the reproducibility evaluation. Ideally, all major findings of the paper can be reproduced. Note that not each and every figure of the paper needs to be reproduced for the paper to be reproducible. Rather, the figures that support the key results. 
 
 \section{Summary}
 Any closing remarks can go to the optional summary section.
 
 
 %%
-%% The next two lines define the bibliography style to be used, and
-%% the bibliography file.
+%% The next two lines define the bibliography style to be used and the bibliography file.
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{sample-base}
  
